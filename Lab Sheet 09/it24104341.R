@@ -1,22 +1,11 @@
-getwd()
 setwd("C:\\Users\\Randi\\Desktop\\PS lab 9\\IT24104341")
 getwd()
 
-# IT24104341.R
-# Exercise: Baking Time Analysis
+#1
+#random sample of size 25 for the baking time
+sample <- rnorm(25, mean =45, sd =2)
 
-# Set seed for reproducibility
-set.seed(123)
+#2
+# Test whether the average baking time is less than 46 minutes at a 5% level of significance.
+t.test (sample, mu=46, alternative = "less")
 
-# i. Generate a random sample of size 25 for baking time
-baking_time <- rnorm(n = 25, mean = 45, sd = 2)
-print("Generated Baking Times:")
-print(baking_time)
-
-# ii. Hypothesis Test: Is average baking time < 46 minutes?
-# H0: mu >= 46
-# H1: mu < 46
-
-test_result <- t.test(baking_time, mu = 46, alternative = "less")
-print("T-Test Result:")
-print(test_result)
